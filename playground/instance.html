@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            // el : element app을 지정 후 new vue로 만든 인스턴스를 사용할 수 있다 
+            el: '#app',
+            data: {
+                message: 'hi'
+            }
+        });
+
+        // 함수이름이 대문자 -> 생성자함수를 의미
+        function Person(name, job) {
+            this.name = name;
+            this.job = job;
+        }
+        var p = new Person('josh','developer');
+
+        function Vue() {
+            this.logText = function() {
+                console.log('hellow');
+            }
+        }
+
+        var vm = new Vue();
+        vm.logText();
+        //hellow
+
+        // 미리 만들어진 인스턴스를 새로 만들때마다 기존 함수 재사용 가능
+    </script>
+</body>
+</html>
